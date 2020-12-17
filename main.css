@@ -1,0 +1,762 @@
+/*----------------------------------INDEX PAGE---------------------------------------------------*/
+
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+/*remove margin from body*/
+body{
+	margin: 0px;
+	font-family: "Didot", serif;
+	overflow-x: hidden;
+}
+
+/*background for landing page*/
+.main-background{
+	background: url("images/background.jpg");
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+}
+
+/*navigation*/
+.nav{
+	overflow: hidden;
+	padding:30px 70px;
+}
+
+.nav a{
+	float: left;
+	color: #4A344B;
+	text-decoration: none;
+}
+
+/*navigation buttons*/
+.nav-item{
+	font-size: 1.05em;
+	font-weight: 900;
+	border-radius: 40px;
+	text-align: center;
+	padding: 15px;
+	border: solid #C7AB9D;
+}
+
+.nav-item:hover{
+	background: rgba(135,95,137,0.75);
+	border: solid white;
+	color:white;
+}
+
+.active{
+	background-color:#4A344B ;
+	border: solid white;
+}
+
+/*navigation item holder*/
+.holder{
+	padding-right: 40px;
+}
+
+/*Adding responsiveness to header*/
+@media screen and (max-width:570px){
+	.nav a{
+		float: none;
+		display: block;
+	}
+	
+	.intro .intro-subtitle {
+    	font-size: 2.5rem;
+  	}
+
+  	.column-left .column-right{
+  		width:100%;
+  	}
+
+  	img{
+  		width: 100%;
+  		height:100%;
+  	}
+
+  	.column-1{
+  		float: none;
+  		display: block;
+  	}
+
+  	.column-2{
+  		float: none;
+  		display: block;
+  	}
+
+}
+
+/*empty div class to make spacing*/
+.empty{
+	padding:20px;
+	float:left;
+}
+
+/*main heading syle*/
+.main-heading{
+	padding-top: 175px;
+	color: #4A344B;
+	font-family: "Brush Script MT", cursive;
+	font-size: 8em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	
+}
+
+
+
+
+            /*__________________________________________INTRO SLIDER______________________________________*/
+
+
+
+
+/*content in the text slider*/
+.content {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+/*container to align and format content*/
+.slider-wrapper {
+  	font-size: 1.7em;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+/*control the text placement*/
+.slider{
+  	height: 50px;
+  	overflow: hidden;
+}
+
+/*text in slider*/
+.slider div {
+	font-family: "Bradley Hand", cursive;
+	color:#875F89;
+	font-style: italic;
+	font-variant:normal;
+	font-weight: 500;
+	height: 50px;
+  	margin-bottom: 50px;
+	text-align: center;
+  	box-sizing: border-box;
+}
+
+/*animate the text*/
+.slider-text1 {
+	animation: slide 8.2s linear infinite;
+}
+
+/*animation for text*/
+@keyframes slide {
+	0% {margin-top:-500px;}
+  	5% {margin-top:-400px;}
+  	20% {margin-top:-400px;}
+  	25% {margin-top:-300px;}
+  	40% {margin-top:-300px;}
+  	45% {margin-top:-200px;}
+  	60% {margin-top:-200px;}
+  	65% {margin-top:-100px;}
+  	80% {margin-top:-100px;}
+  	85% {margin-top:0px;}
+  	100% {margin-top:0px;}
+
+}
+
+
+
+                   /*_______________________________ARROW__________________________________*/
+
+
+
+
+/*container to hold arrow animation*/
+.container {
+	padding-top: 105px;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	display: flex;
+}
+
+/*arrow*/
+.chevron {
+	position: absolute;
+	width: 1.2rem;
+	height: 0.2rem;
+	opacity: 0;
+	transform: scale(0.3);
+	animation: move-chevron 3s ease-out infinite;
+}
+
+/*arrow changing dimensions*/
+.chevron:before, .chevron:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 60%;
+	width: 50%;
+	background: #C7AB9D;
+}
+
+.chevron:before {
+	left: 0;
+	transform: skewY(30deg);
+}
+
+.chevron:after {
+	right: 0;
+	width: 50%;
+	transform: skewY(-30deg);
+}
+
+/*arrow animation in container*/
+@keyframes move-chevron {
+	15% {
+		 opacity: 1;
+	}
+	 
+	66% {
+		 opacity: 1;
+		 transform: translateY(1.5rem);
+	}
+	100% {
+		 opacity: 0;
+		 transform: translateY(2.5rem) scale(0.1);
+	}
+}
+
+
+
+
+                           /*______________________ABOUT SECTION__________________________*/
+
+
+
+
+
+/*image dimensions*/
+.my-image{
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+	border: solid #875F89;
+
+}
+
+/*info section styling*/
+.info{
+	background: url("images/scrolling-background.jpg");
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100%;
+	overflow-x: hidden;
+	padding: 30px;
+	padding-top: 100px;
+}
+
+/*heading*/
+.heading{
+	font-size:3em;
+	font-family: "Brush Script MT", cursive;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 550;
+	padding-top: 47px;
+	padding-bottom: 30px;
+	color:#4A344B;
+
+}
+
+/*about info container*/
+.about-container{
+	font-size:1.3em;
+	font-family: "Bradley Hand", cursive;
+	color:#875F89;
+	font-variant:normal;
+	font-weight: 500;
+
+}
+
+/*text in the about section*/
+.about-text{
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 0.8em;
+}
+
+/*social icons*/
+.fa {
+	padding: 10px;
+  	font-size: 40px;
+  	width: 40px;
+  	height:40px;
+  	text-align: center;
+  	text-decoration: none;
+  	border-radius: 50%;
+}
+
+.fa:hover {
+	background: lightgrey; 
+    opacity: 0.9;
+    color:#4A344B;
+}
+
+.fa-facebook {
+  	background: #4A344B;
+  	color: white;
+  	opacity: 0.7;
+}
+
+.fa-google {
+  	background: #4A344B;
+  	color: white;
+  	opacity: 0.7;
+}
+
+.fa-instagram {
+  	background: #4A344B;
+  	color: white;
+  	opacity: 0.7;
+}
+
+                            
+
+
+
+                            /*________________________PROJECTS section__________________*/
+
+
+
+
+
+/*row to arrange project*/
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*empty columns to fix alignment and responsiveness*/
+.empty-col{
+	float: left;
+	width:10%;
+	margin-bottom: 50px;
+}
+
+/*empty columns to fix alignment and responsiveness*/
+.empty-col-middle{
+	float: left;
+	width:4%;
+	margin-bottom: 50px;
+}
+
+/*left column to contain image*/
+.column-left{
+	float: left;
+	width:29%;
+	text-align: center;
+	box-shadow: #875F89 0px 0px 19px 0px;
+}
+
+/*right column for project description*/
+.column-right{
+	background: rgba(135,95,137,0.15);
+	float: left;
+	width:47%;
+	text-align: center;
+	margin-bottom: 50px;
+	font-size:1.3em;
+	font-family: "Bradley Hand", cursive;
+	color: #4A344B;
+	font-variant:normal;
+	font-weight: 500;
+	padding: 30px;
+	padding-top: 0px;
+	padding-bottom: 25px;
+}
+
+/*project description*/
+.description{
+	color:#875F89;
+	font-size: 0.9em;
+	text-align: justify;
+	font-family: "Garamond", serif;
+	font-variant:normal;
+	font-weight: 600;
+}
+
+/*project images*/
+
+.project-img{
+	width:100%;
+	height:100%;
+
+}
+
+.project-img:hover{
+	opacity: 0.75;
+	box-shadow: #4A344B 0px 0px 19px 0px;
+}
+
+/*buttons for projects*/
+.project-button{
+	background-color:#875F89;
+	color: white;
+	font-size: 0.7em;
+	border-radius: 25px;
+	text-align: center;
+	padding: 10px;
+	border: solid #C7AB9D;
+	text-decoration: none;
+}
+
+.project-button:hover{
+	opacity: 0.6;
+}
+
+
+
+/*________________PROJECTS SLIDER______________________*/
+
+/*slideshow container*/
+.slideshow-container {
+  	position: relative;
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    transition: opacity 2000ms ease-in-out;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #4A344B;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: #4A344B;
+    color: white;
+	box-shadow: 0.5vmin -0.5vmin 0 #875F89;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 7px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    border: none;
+    background-color:#4A344B;
+    opacity: 0.8;
+}
+
+
+
+/*-------------------------------------------PROJECT DOCUMENTATION PAGE-------------------------------------------*/
+
+/*main background for page*/
+.project-documentation{
+	background: url("images/scrolling-background.jpg");
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+/*main heading*/
+.main-heading-project{
+	padding-top: 20px;
+	padding-bottom: 40px;
+	color: #4A344B;
+	font-family: "Brush Script MT", cursive;
+	font-size: 4em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+
+}
+
+.main-heading-project a{
+	text-decoration: none;
+	color: #4A344B;
+	font-size: 0.9em;
+
+}
+
+/*text column for documentation*/
+.text-col{
+	background: rgba(135,95,137,0.15);
+	float: center;
+	width:70%;
+	text-align: center;
+	margin-bottom: 50px;
+	font-size:1.5em;
+	font-family: "Bradley Hand", cursive;
+	color: #4A344B;
+	font-variant:normal;
+	font-weight: 500;
+	padding: 30px;
+}
+
+/*text-container*/
+.text-container{
+	background: rgba(255,255,255,0.6);
+	padding: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+/*row with four columns*/
+.row-options{
+	content: "";
+	display: table;
+	clear: both;
+	float: center;
+	padding-bottom: 70px;
+}
+
+/*4 columns for options*/
+.column-4{
+	width:22.5%;
+	float:left;
+	padding: 20px;
+	background: rgba(255,255,255,0.3);
+}
+
+/*empty cols for spacing*/
+
+.column-4 img:hover{
+	opacity: 0.1;
+	box-shadow: #4A344B 0px 0px 10px 0px;
+
+}
+
+.img-wrap{
+	padding: 0;
+	position: relative;
+	height: 176px;
+	width: 240px;
+}
+
+.hidden-text{
+	position: absolute;
+	color: #4A344B;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 1000;
+	top:20px;
+	left:34px;
+	right: 34px;
+  	visibility: hidden;
+  	opacity: 0;
+  	transition: opacity .2s, visibility .2s;
+}
+
+.img-wrap:hover .hidden-text{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+.genre-text{
+	font-size: 1.2em;
+	padding-right: 10px;
+	color: grey;
+	text-transform: translateY(-10px);
+
+	
+}
+
+.genre{
+	padding-top: 15px;
+}
+
+.icon{
+	width:35px;
+	height: 35px;
+}
+
+.icon:hover{
+	opacity: 1 !important;
+	box-shadow: none !important;
+}
+
+
+/*_____________________FOOTER________________________________________*/
+
+/*footer background*/
+.footer{
+	background: rgba(135,95,137,0.35);
+	width: 100vw;
+}
+
+/*main heading in the footer*/
+.footer-text{
+	font-size: 2em;
+	color: #4A344B;
+	font-variant:normal;
+	font-weight: 700;
+	padding: 20px 0px 10px 60px; 
+}
+
+/*subtitle in footer*/
+.footer-text-subtitle{
+	font-size: 1em;
+	color: #4A344B;
+	font-variant:normal;
+	font-weight: 700;
+	padding: 0px 0px 15px 60px;
+}
+
+/*footer form formatting*/
+.form{
+	float: right;
+	font-size: 1em;
+	color: #4A344B;
+	font-variant:normal;
+	font-weight: 700;
+	padding-right: 70px;
+	padding-top: 17px;
+}
+
+.email-input{
+	background: rgba(255,255,255,0.6);
+	color:#875F89;
+	font-size: 0.85em;
+	border-radius: 25px;
+	text-align: center;
+	padding: 10px;
+	border: solid #C7AB9D;
+	padding-right: 50px;
+}
+
+.submit-button{
+	background-color:#875F89;
+	color: white;
+	font-size: 0.7em;
+	border-radius: 25px;
+	text-align: center;
+	padding: 10px;
+	border: solid #C7AB9D;
+	text-decoration: none;
+}
+
+
+.submit-button:hover{
+	opacity: 0.8;
+}
+
+.column-1{
+	padding-top: 10px;
+	float: left;
+	width:60%;
+}
+
+.column-2{
+	float: right;
+	width: 40;
+}
+
+
+/*-------------------------TOP Button----------------------*/
+
+#myBtn{
+	display: none;
+  	position: fixed;
+  	bottom: 0px;
+  	right: 30px;
+  	z-index: 99;
+  	font-size: 20px;
+  	background: transparent;
+  	border: none;
+  	outline: none;
+  	color: #875F89;
+ 	cursor: pointer;
+ 	padding-right: 7px;
+}
+
+.to-top{
+	color:#875F89;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:#875F89;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .15em #875F89;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:#875F89;
+	transition:transform .5s ease-in;
+}
+
+.to-top:hover{
+	color:#4A344B;
+	border-color:#4A344B;
+}
+
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
+
