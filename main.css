@@ -92,9 +92,10 @@ body{
 
 }
 
+
 /*empty div class to make spacing*/
 .empty{
-	padding:20px;
+	padding:25px;
 	float:left;
 }
 
@@ -366,7 +367,6 @@ body{
 	float: left;
 	width:29%;
 	text-align: center;
-	box-shadow: #875F89 0px 0px 19px 0px;
 }
 
 /*right column for project description*/
@@ -608,16 +608,12 @@ body{
 
 
 .genre-text{
-	font-size: 1.2em;
-	padding-right: 10px;
+	font-size: 0.9em;
 	color: grey;
-	text-transform: translateY(-10px);
-
-	
 }
 
 .genre{
-	padding-top: 15px;
+	padding-bottom: 20px;
 }
 
 .icon{
@@ -758,5 +754,4 @@ body{
 .to-top:hover:before{
 	transform: rotate(360deg);
 }
-
 
